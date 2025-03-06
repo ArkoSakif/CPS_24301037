@@ -15,6 +15,5 @@ after that a loop starts which runs until result<x, inside the loop result is i*
 the loop breaks when i^2 is greater than x therefore it means that the loop runs as long as i=<√ x, so the maximum value of i here can be i=√ x therefore the time complexity for this loop will be O(√ x)
 Now, the time complexity for the whole operation = O(1)*O(1)*O(√ x)=O(√ x)(Ans)
 
-
 2a-
 We approah this problem by 
