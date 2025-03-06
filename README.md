@@ -16,4 +16,13 @@ the loop breaks when i^2 is greater than x therefore it means that the loop runs
 Now, the time complexity for the whole operation = O(1)*O(1)*O(√ x)=O(√ x)(Ans)
 
 2a-
-We approah this problem by 
+I approached this problem by starting to measure the area from the two extreme sticks
+I initialized two variables, start and end, I also initialized the max value(max=0) that will klatern return the maximum area possible after the operation has been done
+start is intialized with 0, indicating the very start of the array and end is initialized with (array's length-1) indicating the last index of the array
+a while loop is ran that will go on until start!=end,the first time the loop runs the area created by the extremes sticks will be stored in max,the area is calculated by multiplying the smaller height of the two sticks with the width difference between them(end-start)
+the conditional to store in max is if area>max it will be stored, and since max was initialized at 0 the first time the loop runs the area automaticcally becomes max
+after the max is updated, the code will check which of the sticks has smaller height,if the start stick has smaller height start will be incremented else if the end stick has a smaller height , end will decrement
+this method is used to check if the a greater area with the taller stick is possible 
+eventually by incrementing and decrementing, start and end will become equal and the loop will break
+at this point the actual max area has been updated , after the loop ends the max value is returned
+
