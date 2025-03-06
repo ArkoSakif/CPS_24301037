@@ -1,0 +1,39 @@
+import java.util.ArrayList;
+public class Main {
+    public static void main(String[] args) {
+ArrayList<Integer> heights=new ArrayList<>();
+        int[] arr = {1,8,6,2,5,4,8,3,7};
+        for (int x=0;x<arr.length;x++) {
+          heights.add(arr[x]);
+        }
+        System.out.println("Maximum water that can be stored: " + maxArea(heights));
+    }
+    public static int maxArea(ArrayList<Integer> height){
+        int max = 0;
+        int start =0;
+        int end =height.size()-1;
+
+               while(start!=end){
+                    if(height.get(start)>height.get(end)){
+                    int area=height.get(end)*(end-start);
+                            if(area>max)
+                                max=area;
+                        end--;
+                    }
+                   else if(height.get(start)<height.get(end)){
+                       int area=height.get(start)*(end-start);
+                       if(area>max)
+                           max=area;
+                       start++;
+                   }
+                   else {
+                        int area=height.get(start)*(end-start);
+                        if(area>max)
+                            max=area;
+                        start++;
+                   }
+                    }
+
+return max;
+               }
+    }
